@@ -3,9 +3,9 @@ id: generic-polling
 title: Generic Polling
 ---
 
-When working with certain 3rd party products (detonation, scan, search, etc.) occasionally we'll find ourselves having to wait for a process to finish on the remote host before we can continue. In those cases, the playbook should stop and wait for the process to complete on the 3rd party product, and continue when it's done.
+When working with certain 3rd party products (detonation, scan, search, etc.) we'll occasionally find ourselves having to wait for a process to finish on the remote host before we can continue. In such cases, the playbook needs to stop and wait for the process to complete on the 3rd party product before it continues.  
 
-We can't achieve via integrations or automations due to hardware limitations. One method for achieving this is using the `GenericPolling` playbook.
+Sometimes, this can't be achieved via integrations or automations due to hardware limitations. One method to overcome this limitation is to use the `GenericPolling` playbook.
 
 ## What it does
 The playbook periodically polls the status of a process being executed on a remote host, and when the host returns that the process execution is done, the playbook finishes execution.
